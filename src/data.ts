@@ -121,7 +121,7 @@ export const sample_food:Food[]=[
         stars: 4,
         imageUrl: 'https://www.allrecipes.com/thmb/Cvx-KcXYxz7a_vdOy8ptLH1JXes=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/4997893-vegetarian-pho-vietnamese-noodle-soup-Buckwheat-Queen-4x3-1-bf6dce29cc8643798007a77216a85077.jpg',
         origins: ['Vietnam'],
-        cookTime: '2 hours'
+        cookTime: '1 hour'
     },
     {
       id: '12',
