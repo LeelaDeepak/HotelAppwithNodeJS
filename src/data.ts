@@ -1,4 +1,5 @@
 import {Food} from '../src/app/shared/models/food';
+import { Tag } from './app/shared/models/tag';
 
 export const sample_food:Food[]=[
     {
@@ -110,5 +111,37 @@ export const sample_food:Food[]=[
         imageUrl: 'https://images.jdmagicbox.com/quickquotes/listicle/listicle_1694060623004_5wx3c_657x466.jpg',
         origins: ['United Kingdom'],
         cookTime: '35 min'
-      }
+      },
+      {
+        id: '11',
+        name: 'Pho',
+        price: 11.99,
+        tags: ['Vietnamese', 'Soup'],
+        favorite: true,
+        stars: 4,
+        imageUrl: 'https://www.allrecipes.com/thmb/Cvx-KcXYxz7a_vdOy8ptLH1JXes=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/4997893-vegetarian-pho-vietnamese-noodle-soup-Buckwheat-Queen-4x3-1-bf6dce29cc8643798007a77216a85077.jpg',
+        origins: ['Vietnam'],
+        cookTime: '2 hours'
+    },
+    {
+      id: '12',
+      name: 'Egg Biryani',
+      price: 22.5,
+      tags: ['Spicy', 'Indian'],
+      favorite: true,
+      stars: 4,
+      imageUrl: 'https://vaya.in/recipes/wp-content/uploads/2019/01/Hyderabadi-Egg-Dum-Biryani.jpg',
+      origins: ['India'],
+      cookTime: '1 hour'
+  }
+];
+
+export const sample_tags:Tag[]=[
+  {name:'All',count:12},
+  {name:'Fast Food',count:2},
+  {name:'Italian',count:2},
+  {name:'Japanese',count:3},
+  {name:'Seafood',count:3},
+  {name:'American',count:2},
+  {name:'Indian',count:2}
 ];

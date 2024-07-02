@@ -1,0 +1,45 @@
+<div class="container">
+    <img [src]="food.imageUrl" [alt]="food.name">
+    <div class="details">
+        <div class="header">
+            <span class="name">{{food.name}}</span>
+            <span class="favorite {{food.favorite?'':'not'}}">❤</span>
+        </div>
+        <div class="rating">
+            @switch (food.stars) {
+                @case (1) {
+                ★
+                }
+                @case(2){
+                ★★
+                }
+                @case (3) {
+                ★★★
+                }
+                @case(4){
+                ★★★★
+                }
+                @case (5) {
+                ★★★★★
+                }
+                }
+        </div>
+        <div class="origins">
+                @for (item of food.origins; track $index) {
+                    <span>{{item}}</span>
+                }
+        </div>
+        <div class="tags">
+            @for (tag of food.tags; track $index) {
+                <a routerLink="/tag/{{tag}}">{{tag}}</a>
+            }
+        </div>
+        <div class="cook-time">
+            <span>Time to cook about <strong>{{food.cookTime}}</strong></span>
+        </div>
+        <div class="price">
+            <span>{{food.price|currency}}</span>
+        </div>
+        <button>Add To Cart</button>
+    </div>
+</div>
