@@ -5,11 +5,12 @@ import { CurrencyPipe } from '@angular/common';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { SearchComponent } from '../../partials/search/search.component';
 import { TagsComponent } from '../../partials/tags/tags.component';
+import { NotFoundComponent } from '../../partials/not-found/not-found.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink,CurrencyPipe,SearchComponent,TagsComponent],
+  imports: [RouterLink,CurrencyPipe,SearchComponent,TagsComponent,NotFoundComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

@@ -1,6 +1,6 @@
 <header>
     <div class="container">
-        <a routerLink="/" class="logo"><h3>Food Mine!</h3></a>
+        <a class="logo"><h3 (mousedown)="gotoHome()">Food Mine!</h3></a>
         <nav>
             <ul>
                 <li>
@@ -15,7 +15,10 @@
                     </div>
                 </li>
                 <li>
-                    <a routerLink="/cart-page">Cart <span>3</span></a>
+                    <a routerLink="/cart-page">Cart @if (cartQuantity!=0) {
+                            <span>{{cartQuantity}}</span>
+                        }
+                    </a>
                 </li>
             </ul>
         </nav>
