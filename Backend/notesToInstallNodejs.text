@@ -12,3 +12,7 @@ npm install nodemon --save-dev // for good performance and increse in speed
 If the express cors and typescript are not in dev dependencies then type those as shown in the file
 Add the line ("start": "cd src && nodemon server.ts",) in the package.json to make recognize those for node.json
 go to command prompt be inside the Backend folder and type "npm start"
+
+doing in Frontend
+create a new folder in shared folder named constants then create a new file named urls.ts
+add HttpClientModule to the project in angular 17 by adding this in the arrya of app.config.ts -> provideHttpClient()

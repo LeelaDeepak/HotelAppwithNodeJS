@@ -1,5 +1,5 @@
-<app-not-found [visible]="!food.id" resetLinkText="Back To Home" notFoundMessage="Food Not Found"></app-not-found>
-@if (food.id) {
+<app-not-found [visible]="!food" resetLinkText="Back To Home" notFoundMessage="Food Not Found"></app-not-found>
+@if (food) {
     <div class="container">
         <img [src]="food.imageUrl" [alt]="food.name">
         <div class="details">
