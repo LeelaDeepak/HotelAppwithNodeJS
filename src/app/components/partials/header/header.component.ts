@@ -11,8 +11,11 @@ import { CartService } from '../../../services/cart.service';
 })
 export class HeaderComponent {
   constructor(private route:Router,cartService:CartService){
+    
     cartService.getCartObservable().subscribe((newCart)=>{
-      this.cartQuantity = newCart.totalCount
+      if (newCart && newCart.totalCount !== undefined) {
+        this.cartQuantity = newCart.totalCount;
+      }
     })
   }
 
