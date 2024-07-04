@@ -1,0 +1,14 @@
+npm init // creates a package.json file which helps to install npm packages
+npm install typescript // create a node application using typescript
+create a file named tsconfig.json and type the code in the shown folder of this project
+create an src folder as shown in this project
+create a .gitignore file to ignore the node modules 
+copy data.ts(static data) to Backend/src
+It will show errors in the file but dont worry just remove the data type imports and replace with "any" for sometime
+npm install express cors
+create a server.ts file
+npm install ts-node --save-dev //to convert typesript to javascript
+npm install nodemon --save-dev // for good performance and increse in speed
+If the express cors and typescript are not in dev dependencies then type those as shown in the file
+Add the line ("start": "cd src && nodemon server.ts",) in the package.json to make recognize those for node.json
+go to command prompt be inside the Backend folder and type "npm start"
