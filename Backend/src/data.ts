@@ -143,3 +143,20 @@ export const sample_tags:any[]=[
   {name:'American',count:2},
   {name:'Indian',count:2}
 ];
+
+export const sample_Users:any[]=[
+  {
+    name:'Deepak',
+    email:'deepak@gmail.com',
+    password:'123456',
+    address:'Toranto On',
+    isAdmin:true
+  },
+  {
+    name:'Lochan',
+    email:'lochan@gmail.com',
+    password:'123456',
+    address:'Toranto On',
+    isAdmin:false
+  }
+];

@@ -13,6 +13,9 @@ If the express cors and typescript are not in dev dependencies then type those a
 Add the line ("start": "cd src && nodemon server.ts",) in the package.json to make recognize those for node.json
 go to command prompt be inside the Backend folder and type "npm start"
 
+
+npm install jsonwebtoken to work with login page
+
 doing in Frontend
 create a new folder in shared folder named constants then create a new file named urls.ts
 add HttpClientModule to the project in angular 17 by adding this in the arrya of app.config.ts -> provideHttpClient()
