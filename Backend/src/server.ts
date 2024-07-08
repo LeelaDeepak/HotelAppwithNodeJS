@@ -36,12 +36,6 @@ app.get("/api/foods/:foodId", (req, res) => { //get food by ID
     res.send(food);
 })
 
-
-const port = 5000;
-app.listen(port, () => {
-    console.log(`Website served on http://localhost:${port}`);
-})
-
 app.post("/api/Users/login", (req, res) => {
     const { email, password } = req.body;
     const user = sample_Users.find(user => user.email === email && user.password === password);
@@ -63,7 +57,7 @@ const generateTokenResponse = (user: any) => {
     return user;
 }
 
-
+const port = 5000;
 app.listen(port, () => {
     console.log(`Website served on http://localhost:${port}`);
 })
