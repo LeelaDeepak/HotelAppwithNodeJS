@@ -3,17 +3,24 @@
         <a class="logo"><h3 (mousedown)="gotoHome()">Food Mine!</h3></a>
         <nav>
             <ul>
-                <li>
+                @if (!isAuth) {
+                    <li>
                     <a routerLink="/login">Login</a>
                 </li>
-                <li class="menu-container">
-                    <a routerLink="/dashboard">Deepak</a>
-                    <div class="menu">
-                        <a routerLink="/profile">Profile</a>
-                        <a routerLink="/orders">Orders</a>
-                        <a>Logout</a>
-                    </div>
-                </li>
+                }
+
+                @if (isAuth) {
+                    <li class="menu-container">
+                        <a routerLink="/dashboard">{{user.name}}</a>
+                        <div class="menu">
+                            <a routerLink="/profile">Profile</a>
+                            <a routerLink="/orders">Orders</a>
+                            <a (click)="logOutUser()">Logout</a>
+                        </div>
+                    </li>
+                }
+                
+                
                 <li>
                     <a routerLink="/cart-page">Cart @if (cartQuantity!=0) {
                             <span>{{cartQuantity}}</span>
