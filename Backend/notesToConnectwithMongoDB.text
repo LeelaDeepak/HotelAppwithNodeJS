@@ -1,0 +1,11 @@
+Connect Login API To MongoDB Atlas
+Moving APIs into routers
+Create MongoDB Atlas used becase of fast development process compared to local mongoDB
+Create .env files
+Install
+    1. mongoose = creating models and working with MongoDB , Not using MongoDB Driver exactly as It takes more time to do that
+    2. dotenv = helps to load the data from .env file efficiently
+    3. bcryptjs = for saving password inside the database
+    4. express-async-handler = to use default async inside our APIs to make the connections consistent
+Connect to MongoDB Atlas
+Use MongoDB instead of data.ts in APIs
