@@ -1,6 +1,7 @@
 import { Router } from "express";
 import asyncHandler from 'express-async-handler';
 import { FoodModel } from "../models/food.model";
+import { sample_food } from "../data";
 
 
 const router = Router();
