@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="details">
+        <app-title title="Register"></app-title>
+        <form [formGroup]="registerForm" (ngSubmit)="submit()">
+            <input-container label="Name">
+                <input type="text" placeholder="Name" formControlName="name">
+            </input-container>
+            <input-container label="Email">
+                <input type="email" placeholder="Email" formControlName="email">
+            </input-container>
+            <input-container label="Password">
+                <input type="password" placeholder="Password" formControlName="password">
+            </input-container>
+            <input-container label="Password">
+                <input type="password" placeholder="Confirm Password" formControlName="confirmPassword">
+            </input-container>
+            <input-container label="Address">
+                <input type="text" placeholder="Address" formControlName="address">
+            </input-container>
+            <div class="button">
+                <button type="submit">Register</button>
+            </div>
+            <div class="login">
+                Already A User? &nbsp; <a routerLink="/login">Login Here</a>
+            </div>
+        </form>
+    </div>
+</div>

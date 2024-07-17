@@ -3,7 +3,8 @@ import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { User } from '../shared/models/user';
 import { IUserLogin } from '../shared/models/Interfaces/IUserlogin';
 import { HttpClient } from '@angular/common/http';
-import { USER_LOGIN_URL } from '../shared/models/constants/urls';
+import { USER_LOGIN_URL, USER_REGISTER_URL } from '../shared/models/constants/urls';
+import { IUserRegister } from '../shared/models/Interfaces/IUserRegister';
 const USER_KEY = 'User';
 @Injectable({
   providedIn: 'root'
@@ -17,6 +18,21 @@ export class UserService {
 
   login(userLogin: IUserLogin): Observable<User> {
     return this.http.post<User>(USER_LOGIN_URL, userLogin).pipe(
+      tap({
+        next: (user: User) => {
+          this.setUserToLocalStorage(user);
+          console.log(user);
+          this.userSubject.next(user);
+        },
+        error: (err) => {
+          alert(err);
+        }
+      })
+    );
+  }
+
+  register(userRegister:IUserRegister):Observable<User>{
+    return this.http.post<User>(USER_REGISTER_URL,userRegister).pipe(
       tap({
         next: (user: User) => {
           this.setUserToLocalStorage(user);

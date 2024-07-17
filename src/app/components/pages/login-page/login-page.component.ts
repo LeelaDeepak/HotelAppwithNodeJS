@@ -2,14 +2,14 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { TitleComponent } from '../../partials/title/title.component';
 import { UserService } from '../../../services/user.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
 import { InputContainerComponent } from '../../partials/input-container/input-container.component';
 
 @Component({
   selector: 'app-login-page',
   standalone: true,
-  imports: [ReactiveFormsModule,TitleComponent,InputContainerComponent],
+  imports: [ReactiveFormsModule,TitleComponent,InputContainerComponent,RouterLink],
   templateUrl: './login-page.component.html',
   styleUrl: './login-page.component.css'
 })
